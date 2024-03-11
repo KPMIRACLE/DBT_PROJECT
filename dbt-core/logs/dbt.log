@@ -1,0 +1,59 @@
+[0m16:46:48.029611 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000205B7CB9B20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000205B7CB8860>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000205B7CB9730>]}
+
+
+============================== 16:46:48.046861 | cdcb126a-57da-4856-af9d-b425cd2bad08 ==============================
+[0m16:46:48.046861 [info ] [MainThread]: Running with dbt=1.7.9
+[0m16:46:48.050803 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': 'C:\\Users\\Admin\\.dbt', 'fail_fast': 'False', 'debug': 'False', 'log_path': 'logs', 'version_check': 'True', 'warn_error': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'invocation_command': 'dbt init', 'log_format': 'default', 'introspect': 'True', 'target_path': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m16:47:04.994151 [debug] [MainThread]: Starter project path: C:\Users\Admin\DBT_PROJECT_LOCAL\DBT_PROJECT\dbt-env\Lib\site-packages\dbt\include\starter_project
+[0m16:47:05.049707 [info ] [MainThread]: 
+Your new dbt project "raw_analytics" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m16:47:05.053704 [info ] [MainThread]: Setting up your profile.
+[0m16:59:04.024517 [error] [MainThread]: Encountered an error:
+[WinError 233] No process is on the other end of the pipe
+[0m16:59:04.037477 [error] [MainThread]: Traceback (most recent call last):
+  File "C:\Users\Admin\DBT_PROJECT_LOCAL\DBT_PROJECT\dbt-env\Lib\site-packages\dbt\cli\requires.py", line 91, in wrapper
+    result, success = func(*args, **kwargs)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\DBT_PROJECT_LOCAL\DBT_PROJECT\dbt-env\Lib\site-packages\dbt\cli\requires.py", line 76, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\DBT_PROJECT_LOCAL\DBT_PROJECT\dbt-env\Lib\site-packages\dbt\cli\main.py", line 515, in init
+    results = task.run()
+              ^^^^^^^^^^
+  File "C:\Users\Admin\DBT_PROJECT_LOCAL\DBT_PROJECT\dbt-env\Lib\site-packages\dbt\task\init.py", line 344, in run
+    self.setup_profile(profile_name)
+  File "C:\Users\Admin\DBT_PROJECT_LOCAL\DBT_PROJECT\dbt-env\Lib\site-packages\dbt\task\init.py", line 264, in setup_profile
+    self.create_profile_from_target(adapter, profile_name=profile_name)
+  File "C:\Users\Admin\DBT_PROJECT_LOCAL\DBT_PROJECT\dbt-env\Lib\site-packages\dbt\task\init.py", line 181, in create_profile_from_target
+    self.create_profile_from_profile_template(profile_template, profile_name)
+  File "C:\Users\Admin\DBT_PROJECT_LOCAL\DBT_PROJECT\dbt-env\Lib\site-packages\dbt\task\init.py", line 165, in create_profile_from_profile_template
+    target = self.generate_target_from_input(prompts, initial_target)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\DBT_PROJECT_LOCAL\DBT_PROJECT\dbt-env\Lib\site-packages\dbt\task\init.py", line 131, in generate_target_from_input
+    target[key] = click.prompt(
+                  ^^^^^^^^^^^^^
+  File "C:\Users\Admin\DBT_PROJECT_LOCAL\DBT_PROJECT\dbt-env\Lib\site-packages\click\termui.py", line 164, in prompt
+    value = prompt_func(prompt)
+            ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\DBT_PROJECT_LOCAL\DBT_PROJECT\dbt-env\Lib\site-packages\click\termui.py", line 140, in prompt_func
+    return f(" ")
+           ^^^^^^
+OSError: [WinError 233] No process is on the other end of the pipe
+
+[0m16:59:04.044459 [debug] [MainThread]: Command `dbt init` failed at 16:59:04.043511 after 736.48 seconds
+[0m16:59:04.047456 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000205B7BB09B0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000205B8685100>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000205B86E6A80>]}
+[0m16:59:04.051445 [debug] [MainThread]: Flushing usage events

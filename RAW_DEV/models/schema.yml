@@ -1,0 +1,47 @@
+# version: 2
+
+# models:
+#   - name: Customer_Dim
+#     description: "This Dim table holds all the customer details and their attributes to fact dims"
+#     columns:
+#       - name: id
+#         description: "The primary key for this table"
+#         tests:
+#           - unique
+#           - not_null
+
+#   - name: Stage_customers
+#     description: "A starter dbt model"
+#     columns:
+#       - name: C_CUSTKEY
+#         description: "The primary key for this table"
+#         tests:
+#           - unique
+#           - not_null
+
+#   - name: Stage_orders
+#     description: "A starter dbt model"
+#     columns:
+#       - name: O_ORDERKEY
+#         description: "The primary key for this table"
+#         tests:
+#           - unique
+#           - not_null
+
+#   - name: Stage_cutomers_orders
+#     description: "A starter dbt model"
+#     columns:
+#       - name: id
+#         description: "The primary key for this table"
+#         tests:
+#           - unique
+#           - not_null
+
+#   - name: 
+#     description: "A starter dbt model"
+#     columns:
+#       - name: id
+#         description: "The primary key for this table"
+#         tests:
+#           - unique
+#           - not_null
